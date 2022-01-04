@@ -26,7 +26,7 @@ git clone https://github.com/cajone/dotnvim.git .
 <i><b>( Note the trailing dot is important but will only work if nvim is empty )</b></i>
 
 ---
-#### Plugin manager for this repo is [vim-plugin](https://github.com/junegunn/vim-plug)
+#### Plugin manager for this repo is [vim-plugin](https://github.com/junegunn/vim-plug) - Please read this page before continuing.
 
 To install on linux
 
