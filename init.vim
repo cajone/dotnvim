@@ -20,7 +20,7 @@
   call plug#end()
 "}
 
-" Set the current path so we can source config files
+" Set the current path so we can source plugin config files
   let path = '~/.config/nvim/vendor/'
 
 " Plugin Configuration
@@ -70,7 +70,7 @@
 
   set number                      		" Line numbers on
   set relativenumber                  " Set relative numbers on
-  highlight LineNr ctermfg=green  " Change line number color to green
+  highlight LineNr ctermfg=green      " Change line number color to green
 
   set showmatch                   		" Show matching brackets/parenthesis
   set incsearch                   		" Find as you type search
@@ -85,8 +85,8 @@
   set scrolloff=3                 		" Minimum lines to keep above and below cursor
   set shell=/usr/bin/zsh          		" change the :! shell to use zsh
   set foldenable                  		" Auto fold code
-"   set list                        " set nolist hide/show hidden chars eg
-"   set ff=unix or ff=dos           " change the file line endings
+"   set list                          " set nolist hide/show hidden chars eg
+"   set ff=unix or ff=dos             " change the file line endings
 
 " Key Bindings
 
