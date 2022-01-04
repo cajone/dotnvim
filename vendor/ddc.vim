@@ -31,6 +31,8 @@ call ddc#custom#patch_filetype('markdown', 'sourceParams', {
       \ 'around': {'maxSize': 100},
       \ })
 
+call ddc#custom#patch_filetype(['go', 'golang'], 'sources', ['around', 'golang'])
+
 " Mappings
 
 " <TAB>: completion.
@@ -44,3 +46,4 @@ inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
 
 " Use ddc.
 call ddc#enable()
+

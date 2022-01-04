@@ -12,24 +12,30 @@
     " Under evaluation
     Plug 'vim-denops/denops.vim'
     Plug 'Shougo/ddc.vim'
+    Plug 'https://github.com/Shougo/ddc-omni'
+    Plug 'https://github.com/Shougo/neosnippet.vim'
+    Plug 'https://github.com/Shougo/ddc-around'
+    Plug 'https://github.com/Shougo/ddc-matcher_head'
+    Plug 'https://github.com/Shougo/ddc-sorter_rank'
   call plug#end()
 "}
 
 " Set the current path so we can source config files
-  let path = expand('%:p:h')
+  let path = '~/.config/nvim/vendor/'
 
 " Plugin Configuration
   " Airline Theme
-    exec 'source' path . '/vendor/vim-airline.vim'
-
+    exec 'source' path . 'vim-airline.vim'
   "dcc
-    exec 'source' path . '/vendor/dcc.vim'
-
+    exec 'source' path . 'ddc.vim'
+  "dcc-omni
+    exec 'source' path . 'ddc-omni.vim'
+  " neosnippet
+    exec 'source' path . 'neosnippet.vim'
+  " VimWiki
+    exec 'source' path . 'vimwiki.vim'
   " Vim-go
   " call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-
-  " VimWiki
-    exec 'source' path . '/vendor/vimwiki.vim'
 
 " User defined functions
 
@@ -96,3 +102,11 @@
   " toggle vsplit / hsplit
   nnoremap <F3> <C-w>t<C-w>K
   nnoremap <F4> <C-w>t<C-w>H
+
+  " Jumping between windows replacement for Ctrl-w[hjkl]
+  nnoremap <C-h> <C-w>h
+  nnoremap <C-j> <C-w>j
+  nnoremap <C-k> <C-w>k
+  nnoremap <C-l> <C-w>l
+
+
