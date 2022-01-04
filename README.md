@@ -1,4 +1,13 @@
-###  Note: the following commands maybe distructive to your existing vim setup make sure you move your
+## Nvim configuration
+---
+### Note to reader :
+This nvim repo contains functionality that I use on a day to day basis, it maybe of no use to you.
+The Author (me) strongly recommends that you review the init.vim file and modify to suit or even better 
+start with an empty init.vim file and only populate it with configuration / plugins that are of use to you, this will
+give you a much stronger understanding of what happens on key presses !!
+
+---
+####  Note: the following commands maybe destructive to your existing nvim setup, make sure you move your existing config ( if it exists )
 ~/.config/nvim  eg:
 
 ```zsh
