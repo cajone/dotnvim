@@ -10,37 +10,26 @@
     Plug 'https://github.com/cohama/agit.vim'
 
     " Under evaluation
-    Plug 'https://github.com/ms-jpq/coq_nvim'
-    Plug 'https://github.com/neovim/nvim-lspconfig'
+    Plug 'vim-denops/denops.vim'
+    Plug 'Shougo/ddc.vim'
   call plug#end()
 "}
 
+" Set the current path so we can source config files
+  let path = expand('%:p:h')
+
 " Plugin Configuration
   " Airline Theme
-      let g:airline_theme='base16_summerfruit'
-      set laststatus=2 					    " Get instant feeback from airline
-      let g:airline#extensions#tagbar#enabled = 1
+    exec 'source' path . '/vendor/vim-airline.vim'
 
-  " LSPconfig
-  "  local lsp = require "lspconfig"
-  "  local coq = require "coq"
+  "dcc
+    exec 'source' path . '/vendor/dcc.vim'
 
   " Vim-go
   " call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
   " VimWiki
-    let g:vimwiki_list = [{'path': '~/vimwiki/',
-                          \ 'syntax': 'markdown', 'ext': '.md'}]
-
-    let g:vimwiki_auto_chdir = 1
-    let g:vimwiki_conceallevel = 0
-
-    augroup vimwiki
-      autocmd BufWritePost ~/vimwiki/* !git add "%";git commit -m "Auto commit of %:t." "%"
-    augroup END
-
-
-
+    exec 'source' path . '/vendor/vimwiki.vim'
 
 " User defined functions
 
@@ -49,8 +38,6 @@
      set relativenumber!
      set number!
   endfunction
-
-
 
 " Leader Key
   let mapleader='\'
@@ -105,3 +92,7 @@
 
   " turn off highlighted search
   map <leader>z  :nohlsearch<cr>
+
+  " toggle vsplit / hsplit
+  nnoremap <F3> <C-w>t<C-w>K
+  nnoremap <F4> <C-w>t<C-w>H
